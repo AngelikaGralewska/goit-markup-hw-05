@@ -67,6 +67,7 @@ body{
 .nav-link::after{
     content:"";
     display: block;
+    border-bottom: #2196f3;
     width: 100%;;
     height: 4px;
     background-color: #2196f3;
@@ -202,6 +203,17 @@ body{
     cursor: pointer;
     margin: 0px 479px;
 }
+.modal-button-clouse{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
 
 /*text*/
 .text-1{
@@ -212,6 +224,19 @@ body{
     color: #757575;
     max-width: 270px;
 }
+.text-portfolio-overlay{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    padding-left: 24px;
+    padding-right: 45px;
+    padding-top: 49px;
+    padding-bottom: 49px;
+    margin: 0;
+}
+
 
 /*team*/
 .co-worker{
@@ -414,9 +439,29 @@ body{
     padding-bottom: 10px;
     border: 1px solid #ECECEC;
     cursor: pointer;
+    width: 370px;
+    height: 404px;
+}
+.container-portfolio-projects-picture{
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+.container-portfolio-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(33, 150, 243, 0.9);
+    transform: translatey(100%);
+    transition: transform 250ms ease;
 }
 .container-portfolio-projects-item:hover{
     box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+}
+.container-portfolio-projects-item:hover .container-portfolio-overlay{
+    transform: translatex(0);
 }
 .container-portfolio-projects-text{
     padding-left: 15px;
@@ -435,4 +480,29 @@ body{
     align-items: center;
     justify-content: space-around;
     max-width: 230px;
+}
+
+/*modal*/
+.backdrop{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    ;
+}
+.is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 528px;
+    height: 581px;
+    background-color: #ffffff;
 }
