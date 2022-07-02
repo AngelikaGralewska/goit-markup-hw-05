@@ -35,7 +35,7 @@
         <section class="container-main">
          <div class="container">
             <h1 class="main-title"> EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
-            <button class="main-button" type="button">Zamów usługę</button>
+            <button class="main-button" type="button" data-modal-open>Zamów usługę</button>
         </div>
         </section>
     <section class="container-lorem-ipsum">
@@ -295,5 +295,11 @@
             </li>
          </div>
 </footer>
+    <div  class="backdrop is-hidden"data-modal>
+        <div class="modal">
+            <button type="button" class="modal-button-clouse" data-modal-close>x</button>
+        </div>
+    </div>
+    <script src="./modal/modal.js"></script>
 </body>
 </html>
